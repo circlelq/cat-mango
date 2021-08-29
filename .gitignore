@@ -1,3 +1,6 @@
+.DS_Store
+mango/cloudfunctions
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof

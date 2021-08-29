@@ -1,0 +1,1 @@
+"/Applications/wechatwebdevtools.app/Contents/MacOS/cli" cloud functions deploy --e cloud1-1gqzov9m6c55126b --n quickstartFunctions --r --project "/Users/circle/Documents/GitHub/cat-mango/mango" --report

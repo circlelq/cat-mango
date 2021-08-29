@@ -1,0 +1,56 @@
+<!--index.wxml-->
+
+<view style="display:flex; justify-content:center; align-items:center;">
+  <image mode="widthFix" class="cat_image" src="/images/山竹.jpg" style= "width: 90%;">
+  </image>
+</view>
+
+
+
+<view class = "itemname1">
+  <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+    <view class= "cat-card">{{catname}}</view>
+  </view>
+  <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+    <!-- 猫叫声 -->
+<view class="sound">
+<block wx:for="{{audioArr}}" wx:key="content" wx:for-item="v" wx:for-index="key">
+  
+  <!-- 默认状态 未播放 -->
+  <view  wx:if="{{!v.bl}}" bindtap='audioPlay' data-key="{{key}}" data-id="{{v.id}}" data-bl="{{v.bl}}">
+    <image class = "play" src="/images/play.png"  ></image>    
+  </view>
+
+  <!-- 当前正在播放状态 -->
+  <view wx:if="{{v.bl}}" bindtap='audioStop' data-key="{{key}}"  data-id="{{v.id}}" data-bl="{{v.bl}}">
+    <image class = "play" src="/images/pause.png" ></image>    
+  </view>
+
+</block>
+</view>
+  </view>
+</view>
+
+
+<view class = "itemname1">
+<view wx:for = "{{catitems}}">
+  <view style='flex-shrink:0; box-sizing:border-box; width:350rpx;'>
+    {{item.category}}
+  </view>
+  <view class = "itemname2">{{item.content}}</view>
+</view>
+</view>
+
+
+<text> \n </text>
+
+<block wx:for="{{nums}}">
+
+<view style="display:flex; justify-content:center; align-items:center;">
+  <image mode="widthFix" class="cat_image" src="{{url}}{{catname}}{{item.num}}.jpg" style= "width: 90%;">
+  </image>
+</view>
+
+<text> \n </text>
+
+</block>
